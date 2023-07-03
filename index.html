@@ -38,8 +38,8 @@
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev" @click="thumbsClick()"></div>
-                    <div class="next"></div>
+                    <div class="prev" @click="thumbsClickPrev()"></div>
+                    <div class="next"  @click="thumbsClickNext()"></div>
                     <div class="thumb" :class="index == classActive ? 'active' : '' " v-for="(thumbImage , index) in slides">
                         <img :src="thumbImage.image" :alt="thumbImage.title" />
                     </div>

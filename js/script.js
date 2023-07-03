@@ -36,19 +36,31 @@ const { createApp } = Vue
 
       }
 
-      
+
     },
 
     methods:{
     
-        thumbsClick(){
+        thumbsClickPrev(){
             if(this.classActive > 0){
                 this.classActive-- ;
             }
             else{
                 this.classActive = this.slides.length - 1 ;
             }
+            console.log(this.classActive);
+        } ,
+        
+        thumbsClickNext(){
+            if(this.classActive < this.slides.length - 1){
+                this.classActive++ ;
+            }
+            else{
+                this.classActive = 0 ;
+            }
+            console.log(this.classActive);
         }
+        
 
     } , 
   }).mount('#app');
